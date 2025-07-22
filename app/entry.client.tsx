@@ -2,8 +2,8 @@ import { RemixBrowser } from '@remix-run/react';
 import { startTransition, StrictMode } from 'react';
 import { hydrateRoot } from 'react-dom/client';
 
-// Ensure window is available before hydrating
-if (typeof window !== 'undefined') {
+// Ensure window is available and document is ready
+if (typeof window !== 'undefined' && document.readyState !== 'loading') {
   startTransition(() => {
     hydrateRoot(
       document,
@@ -11,5 +11,16 @@ if (typeof window !== 'undefined') {
         <RemixBrowser />
       </StrictMode>,
     );
+  });
+} else if (typeof window !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
+    startTransition(() => {
+      hydrateRoot(
+        document,
+        <StrictMode>
+          <RemixBrowser />
+        </StrictMode>,
+      );
+    });
   });
 }
