@@ -88,7 +88,6 @@ export default {
 					400: '#f87171',
 					500: '#ef4444'
 				},
-				// Alpha colors for Bolt.new
 				alpha: {
 					gray: {
 						2: 'rgba(0, 0, 0, 0.02)',
@@ -106,7 +105,8 @@ export default {
 					},
 					accent: {
 						10: 'rgba(59, 130, 246, 0.1)',
-						20: 'rgba(59, 130, 246, 0.2)'
+						20: 'rgba(59, 130, 246, 0.2)',
+						30: 'rgba(59, 130, 246, 0.3)'
 					},
 					red: {
 						10: 'rgba(239, 68, 68, 0.1)',
