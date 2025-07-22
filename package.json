@@ -103,6 +103,7 @@
     "remark-gfm": "^4.0.1",
     "remix-island": "^0.2.0",
     "remix-utils": "^7.7.0",
+    "sass-embedded": "^1.89.2",
     "shiki": "^1.29.2",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.2",
