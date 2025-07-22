@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import { vitePlugin as remix } from '@remix-run/dev'
+import react from '@vitejs/plugin-react'
 import path from 'path'
 import { componentTagger } from "lovable-tagger"
 import { nodePolyfills } from 'vite-plugin-node-polyfills'
@@ -16,13 +16,7 @@ export default defineConfig(({ mode }) => ({
     target: 'es2022',
   },
   plugins: [
-    remix({
-      future: {
-        v3_fetcherPersist: true,
-        v3_relativeSplatPath: true,
-        v3_throwAbortReason: true,
-      }
-    }),
+    react(),
     nodePolyfills({
       include: ['buffer', 'path'],
       globals: {
