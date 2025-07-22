@@ -1,0 +1,17 @@
+name = "bolt"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[env.development]
+vars = { NODE_ENV = "development" }
+
+[env.production]
+vars = { NODE_ENV = "production" }
+
+[[env.development.services]]
+binding = "ANTHROPIC_API_KEY"
+service = "anthropic-key"
+
+[[env.production.services]]
+binding = "ANTHROPIC_API_KEY"
+service = "anthropic-key"
